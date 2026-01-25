@@ -20,7 +20,7 @@ export default function Login() {
                 {/* With Google */}
                 <button
                     type="button"
-                    className='text-sm sm:text-md md:text-[16px] cursor-pointer flex gap-2 items-center justify-center border border-gray-300 w-full py-[6px] px-2 rounded-lg text-black'
+                    className='sm:text-md md:text-[16px] cursor-pointer flex gap-2 items-center justify-center border border-gray-300 w-full py-[6px] px-2 rounded-lg text-black'
                 >
                     <FcGoogle className='text-black' />
                     Continue with Google
