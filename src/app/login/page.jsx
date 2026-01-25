@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc'
 
-export default function Register() {
+export default function Login() {
     return (
         <main className="h-screen w-full flex flex-col items-center bg-[#FCFAF8] font-sans">
 
             <section className="flex flex-col gap-3 mt-10">
-                <h1 className="transition-text text-2xl md:text-3xl font-bold font-sans text-center">Create Account</h1>
+                <h1 className="transition-text text-2xl md:text-3xl font-bold font-sans text-center">Welcome Back</h1>
                 <p className="transition-text text-gray-500 text-xs md:text-sm tracking-widest text-center">
-                    Join our community of readers and writers
+                    Sign in to continue reading
                 </p>
             </section>
 
@@ -29,17 +29,6 @@ export default function Register() {
                 <hr className='text-gray-300 mt-4 mb-6' />
 
                 {/* Manually */}
-
-                <section className='flex flex-col gap-2'>
-                    <label htmlFor="username">
-                        Username
-                    </label>
-                    <input
-                        type="text"
-                        placeholder='Elon Musk'
-                        className='w-full border border-gray-300 w-full py-[6px] px-2 rounded-lg bg-white/70 focus:outline-[#DD6235]'
-                    />
-                </section>
 
                 <section className='flex flex-col gap-2 mt-3'>
                     <label htmlFor="email">
@@ -66,7 +55,7 @@ export default function Register() {
                 <button type="submit"
                     className='cursor-pointer w-full border border-gray-300 w-full py-2 px-2 rounded-lg bg-[#DD6235] mt-3 text-white'
                 >
-                    Create Account
+                    Sign In
                 </button>
 
             </form>
@@ -74,10 +63,10 @@ export default function Register() {
             <section className='mt-3 text-end flex justify-end flex items-center gap-2'>
                 <p> Already have an account? </p>
                 <Link
-                    href="/login"
+                    href="/register"
                     className='text-[#f54505] hover:border-b border-[#f54505]'
                 >
-                    Sign in
+                    Sign up
                 </Link>
             </section>
 
