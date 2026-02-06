@@ -1,6 +1,7 @@
 // src/app/layout.jsx
 import { Geist, Geist_Mono } from "next/font/google";
-import { AuthProvider } from "./context/AuthContext";  // ✅ Import AuthProvider, not useAuth
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { AuthProvider } from "./context/AuthContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "The Journal - BlogSphere",
-  description: "Stories that inspire, ideas that matter. Discover thoughtful articles on technology, education, and social trends.",
+  description:
+    "Stories that inspire, ideas that matter. Discover thoughtful articles on technology, education, and social trends.",
 };
 
 export default function RootLayout({ children }) {
@@ -28,6 +30,9 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           {children}
         </AuthProvider>
+
+        {/* Vercel Speed Insights */}
+        <SpeedInsights />
       </body>
     </html>
   );
